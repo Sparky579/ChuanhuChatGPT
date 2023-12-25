@@ -135,6 +135,8 @@ spark_appid = config.get("spark_appid", "")
 os.environ["SPARK_APPID"] = spark_appid
 spark_api_secret = config.get("spark_api_secret", "")
 os.environ["SPARK_API_SECRET"] = spark_api_secret
+gemini_key = config.get("gemini_key", "")
+os.environ["GEMINI_KEY"] = gemini_key
 
 claude_api_secret = config.get("claude_api_secret", "")
 os.environ["CLAUDE_API_SECRET"] = claude_api_secret

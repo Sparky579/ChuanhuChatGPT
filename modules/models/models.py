@@ -133,6 +133,10 @@ def get_model(
             from .DALLE3 import OpenAI_DALLE3_Client
             access_key = os.environ.get("OPENAI_API_KEY", access_key)
             model = OpenAI_DALLE3_Client(model_name, api_key=access_key, user_name=user_name)
+        elif model_type == ModelType.Gemini:
+            from .Gemini import GeminiClient
+            api_key = os.environ.get("gemini_key")
+            model = GeminiClient(model_name, api_key, user_name)
         elif model_type == ModelType.Unknown:
             raise ValueError(f"未知模型: {model_name}")
         logging.info(msg)

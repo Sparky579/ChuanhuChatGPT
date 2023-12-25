@@ -80,6 +80,7 @@ ONLINE_MODELS = [
     "ERNIE-Bot-turbo",
     "ERNIE-Bot",
     "ERNIE-Bot-4",
+    "Gemini",
 ]
 
 LOCAL_MODELS = [
@@ -169,6 +170,10 @@ MODEL_METADATA = {
         "model_name": "ERNIE-Bot-4",
         "token_limit": 1024,
     },
+    "Gemini": {
+        "model_name": "Gemini",
+        "tolen_limit": 1024,
+    }
 }
 
 if os.environ.get('HIDE_LOCAL_MODELS', 'false') == 'true':
